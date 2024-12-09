@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Edit Doctor Profile</h1>
+<form method="POST">
+    <div>
+        <label for="specialization">Specialization:</label>
+        <input type="text" id="specialization" name="specialization" value="{{ doctor.specialization }}" required>
+    </div>
+    <div>
+        <label for="qualifications">Qualifications:</label>
+        <textarea id="qualifications" name="qualifications" required>{{ doctor.qualifications }}</textarea>
+    </div>
+    <div>
+        <label for="university">University:</label>
+        <input type="text" id="university" name="university" value="{{ doctor.university }}" required>
+    </div>
+    <button type="submit">Update Profile</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Respond to Query</h1>
+<h2>Patient: {{ report.patient.user.username }}</h2>
+<p>Submitted: {{ report.submission_date }}</p>
+<p>Description: {{ report.description }}</p>
+<p>ML Prediction: {{ report.ml_prediction }}</p>
+<img src="{{ url_for('static', filename=report.image_path) }}" alt="Patient's skin image">
+
+<form method="POST">
+    <div>
+        <label for="severity">Severity:</label>
+        <select id="severity" name="severity" required>
+            <option value="low">Low</option><option value="low">Low</option>
+            <option value="moderate">Moderate</option>
+            <option value="severe">Severe</option>
+        </select>
+    </div>
+    <div>
+        <label for="cancer_type">Cancer Type (if applicable):</label>
+        <input type="text" id="cancer_type" name="cancer_type">
+    </div>
+    <div>
+        <label for="other_condition">Other Condition (if not cancer):</label>
+        <input type="text" id="other_condition" name="other_condition">
+    </div>
+    <div>
+        <label for="medication">Medication:</label>
+        <textarea id="medication" name="medication"></textarea>
+    </div>
+    <div>
+        <label for="frequency">Frequency:</label>
+        <input type="text" id="frequency" name="frequency">
+    </div>
+    <div>
+        <label for="directions">Directions of Use:</label>
+        <textarea id="directions" name="directions"></textarea>
+    </div>
+    <button type="submit">Submit Response</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Test Result</h1>
+<h2>Submitted: {{ report.submission_date }}</h2>
+<p>Description: {{ report.description }}</p>
+<p>ML Prediction: {{ report.ml_prediction }}</p>
+<img src="{{ url_for('static', filename=report.image_path) }}" alt="Your skin image">
+
+{% if report.diagnosis %}
+    <h3>Doctor's Diagnosis</h3>
+    <p>Doctor: Dr. {{ report.doctor.user.username }}</p>
+    <p>Severity: {{ report.diagnosis.severity }}</p>
+    {% if report.diagnosis.cancer_type %}
+        <p>Cancer Type: {{ report.diagnosis.cancer_type }}</p>
+    {% endif %}
+    {% if report.diagnosis.other_condition %}
+        <p>Other Condition: {{ report.diagnosis.other_condition }}</p>
+    {% endif %}
+    <p>Medication: {{ report.diagnosis.medication }}</p>
+    <p>Frequency: {{ report.diagnosis.frequency }}</p>
+    <p>Directions: {{ report.diagnosis.directions }}</p>
+{% endif %}
+
+{% endblock %}
+

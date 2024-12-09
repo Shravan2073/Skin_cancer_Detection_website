@@ -1,0 +1,11 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+#machine learning model
+cnn_fc_model.weights.h5
+# Virtual environments
+.venv

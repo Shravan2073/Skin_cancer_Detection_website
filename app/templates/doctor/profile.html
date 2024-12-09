@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Doctor Profile</h1>
+<h2>Dr. {{ doctor.user.username }}</h2>
+<p>Email: {{ doctor.user.email }}</p>
+<p>Specialization: {{ doctor.specialization }}</p>
+<p>Qualifications: {{ doctor.qualifications }}</p>
+<p>University: {{ doctor.university }}</p>
+<a href="{{ url_for('doctor.edit_profile') }}">Edit Profile</a>
+{% endblock %}
+

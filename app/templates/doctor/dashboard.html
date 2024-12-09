@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4">Doctor Dashboard</h1>
+        <h2 class="text-muted">Welcome, Dr. {{ doctor.user.username }}</h2>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Pending Reports</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+            {% if pending_reports %}
+                {% for report in pending_reports %}
+                    <li class="list-group-item">
+                        <a href="{{ url_for('doctor.respond_query', report_id=report.id) }}" class="text-decoration-none">
+                            <strong>Patient:</strong> {{ report.patient.user.username }} - 
+                            <strong>Submitted:</strong> {{ report.submission_date }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li class="list-group-item text-muted">No pending reports</li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h3 class="card-title">Upcoming Appointments</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+            {% if appointments %}
+                {% for appointment in appointments %}
+                    <li class="list-group-item">
+                        <strong>Patient:</strong> {{ appointment.patient.user.username }} - 
+                        <strong>Date:</strong> {{ appointment.date_time }}
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li class="list-group-item text-muted">No upcoming appointments</li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <a href="{{ url_for('doctor.profile') }}" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-person"></i> View Profile
+        </a>
+        <a href="{{ url_for('doctor.queries') }}" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-chat-dots"></i> View All Queries
+        </a>
+    </div>
+</div>
+{% endblock %}

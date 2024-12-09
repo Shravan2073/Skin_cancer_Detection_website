@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinScan - Skin Cancer Awareness and Detection</title>
+    <!-- Add Bootstrap for styling and responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            padding: 120px 20px;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .info-section h3 {
+            color: #007bff;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SkinScan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#types">Types</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prevention">Prevention</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#treatment">Treatment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white" href="/login">Log-In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center">
+        <h1>SkinScan: Early Detection Saves Lives</h1>
+        <p>Your health matters. Learn about skin cancer, detect it early, and take action.</p>
+      
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About Skin Cancer</h2>
+            <div class="info-section mt-4">
+               <h4> <p>
+                    Skin cancer is the uncontrolled growth of abnormal skin cells, often caused by overexposure to the sun's ultraviolet (UV) rays or artificial tanning. It is the most common form of cancer globally, affecting millions of people annually. Fortunately, when detected early, it is highly treatable. There are three major types of skin cancer: basal cell carcinoma, squamous cell carcinoma, and melanoma.
+                </p>
+                <p>
+                    At <b>SkinScan</b>, we are committed to raising awareness about skin cancer and providing accessible tools for early detection. Whether you're looking to learn more, get checked, or spread awareness, SkinScan is here to help.
+                </p>
+            </h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Skin Cancer -->
+    <section id="types" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Types of Skin Cancer</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h3>Basal Cell Carcinoma (BCC)</h3>
+                    <p>
+                        The most common type of skin cancer, BCC, develops in the basal cells. It often appears as a slightly transparent bump on the skin but can take other forms.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Squamous Cell Carcinoma (SCC)</h3>
+                    <p>
+                        SCC is the second most common type and develops in the squamous cells. It may appear as a red, scaly patch or a firm bump. It can spread to other parts of the body if left untreated.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Melanoma</h3>
+                    <p>
+                        Melanoma is the deadliest form of skin cancer but is less common. It often develops in moles or appears as a dark spot on the skin. Early detection is crucial for treatment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Tips -->
+    <section id="prevention" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Prevention Tips</h2>
+            <ul class="list-group mt-4">
+                <li class="list-group-item">Avoid prolonged exposure to the sun, especially between 10 AM and 4 PM.</li>
+                <li class="list-group-item">Always use sunscreen with SPF 30 or higher, even on cloudy days.</li>
+                <li class="list-group-item">Wear protective clothing, such as hats and sunglasses, when outdoors.</li>
+                <li class="list-group-item">Avoid tanning beds and artificial UV light sources.</li>
+                <li class="list-group-item">Perform regular skin self-examinations and look for any new or changing spots.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Treatment Options -->
+    <section id="treatment" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Treatment Options</h2>
+            <div class="info-section mt-4">
+                <p>
+                    The treatment for skin cancer depends on its type, size, and location. Common treatment options include:
+                </p>
+                <ul>
+                    <li><b>Excision:</b> Surgically removing the cancerous tissue.</li>
+                    <li><b>Cryotherapy:</b> Freezing cancer cells with liquid nitrogen.</li>
+                    <li><b>Mohs Surgery:</b> Removing cancer layer by layer to preserve healthy tissue.</li>
+                    <li><b>Radiation Therapy:</b> Using targeted radiation to kill cancer cells.</li>
+                    <li><b>Immunotherapy:</b> Boosting the body's immune system to fight cancer.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>Have questions or concerns? We're here to help!</p>
+            <a href="mailto:support@skinscan.com" class="btn btn-primary">Email Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 SkinScan. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

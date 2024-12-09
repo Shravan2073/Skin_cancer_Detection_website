@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Patient Queries</h1>
+<ul>
+    {% for report in test_reports %}
+        <li>
+            <h3>Patient: {{ report.patient.user.username }}</h3>
+            <p>Submitted: {{ report.submission_date }}</p>
+            <p>Description: {{ report.description }}</p>
+            <p>ML Prediction: {{ report.ml_prediction }}</p>
+            <a href="{{ url_for('doctor.respond_query', report_id=report.id) }}">Respond to Query</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+

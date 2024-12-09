@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Your Appointments</h1>
+<ul>
+    {% for appointment in appointments %}
+        <li>
+            <h3>Doctor: Dr. {{ appointment.doctor.user.username }}</h3>
+            <p>Date: {{ appointment.date_time }}</p>
+            <p>Status: {{ appointment.status }}</p>
+            {% if appointment.status == 'Scheduled' %}
+                <form method="POST" action="{{ url_for('patient.request_appointment_change', appointment_id=appointment.id) }}">
+                    <label for="new_date">Request New Date:</label>
+                    <input type="datetime-local" id="new_date" name="new_date" required>
+                    <button type="submit">Request Change</button>
+                </form>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('patient.dashboard') }}">Back to Dashboard</a>
+{% endblock %}
+

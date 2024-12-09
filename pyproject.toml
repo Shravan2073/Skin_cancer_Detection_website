@@ -1,0 +1,20 @@
+[project]
+name = "skin-cancer-detection"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.1.0",
+    "flask-login>=0.6.3",
+    "flask-migrate>=4.0.7",
+    "flask-sqlalchemy>=3.1.1",
+    "flask-wtf>=1.2.2",
+    "pillow>=11.0.0",
+    "psycopg2-binary>=2.9.10",
+    "pytest>=8.3.4",
+    "pytest-flask==1.2.0",
+    "python-dotenv>=1.0.1",
+    "tensorflow[and-cuda]>=2.18.0",
+    "werkzeug>=3.1.3",
+]

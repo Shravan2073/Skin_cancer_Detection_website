@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Patient Profile</h1>
+<h2>{{ patient.user.username }}</h2>
+<p>Email: {{ patient.user.email }}</p>
+<p>Date of Birth: {{ patient.date_of_birth }}</p>
+<p>Medical History: {{ patient.medical_history }}</p>
+<a href="{{ url_for('patient.edit_profile') }}">Edit Profile</a>
+{% endblock %}
+

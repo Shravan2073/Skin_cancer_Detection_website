@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>View All Profiles</h1>
+<h2>Doctors</h2>
+<ul>
+    {% for doctor in doctors %}
+        <li>
+            <h3>{{ doctor.user.username }}</h3>
+            <p>Specialization: {{ doctor.specialization }}</p>
+            <p>Qualifications: {{ doctor.qualifications }}</p>
+            <p>University: {{ doctor.university }}</p>
+        </li>
+    {% endfor %}
+</ul>
+<h2>Patients</h2>
+<ul>
+    {% for patient in patients %}
+        <li>
+            <h3>{{ patient.user.username }}</h3>
+            <p>Date of Birth: {{ patient.date_of_birth }}</p>
+            <p>Medical History: {{ patient.medical_history }}</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
